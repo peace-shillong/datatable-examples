@@ -1,0 +1,87 @@
+
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"> 
+
+<script type="text/javascript">
+        
+            alert("hello");
+            //$('#example').DataTable();
+        
+    </script>
+<div class="row">
+    <div class="col-lg-3">
+        &nbsp; Hello
+    </div>
+ <div class="col-lg-9">
+<table id="example" class="display table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Interview Center</th>
+                <th>Applicant Code</th>
+            </tr>
+        </thead>
+        
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Interview Center</th>
+                <th>Applicant Code</th>              
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</div>
+<script type="text/javascript">
+    alert("hello 2");
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    /*$('#example').DataTable(){
+        "pageLength": 3
+    };*/
+    //ARRAY 
+    // var dataSet = [["Rice","32123"],["Arecanut","6714"],["Ginger","4974"],["Potato","4086"],["Maize","2719"],["Carrot","1999"],["Banana","1457"],["Cabbage","1426"],["Broomstick","1361"],["Squash","1313"],["Tomato","1165"],["Pineapple","1082"],["Turmeric(Raw)","659"],["Orange","649"],["Cashew Nut","557"],["Chilli","542"],["Cauliflower","536"],["Sweet Potato","531"],["Pumpkin","492"],["Coriander","463"],["Brinjal","448"],["Tezpatta","441"],["Radish","409"],["Black Pepper","409"],["Betel Leaves","344"],["Mustard","333"],["Pig","310"],["Rubber","265"],["Pea","222"],["Leafy Vegetables","216"],["Litchi","190"],["Cucumber","178"],["Mango","171"],["Jackfruit","161"],["FrenchBeans","151"],["Sohphlang (Flemingia Vetitia)","141"],["Chicken","133"],["Soyabean","131"],["Lemon","126"],["Cow","125"],["Garlic","112"],["Green Chilly","101"],["Bamboo","87"],["Onion","84"],["Tamarind","67"],["Millets","63"],["Brocolli","61"],["Yam","61"],["Rose","55"],["Fire wood","51"],["BetelVine","48"],["Banana (Green)","48"],["Capsicum","46"],["Fish","44"],["Papaya","41"],["Goat","39"],["Chest Nut","38"],["Dry Chilli","36"],["Ladies Finger","34"],["Plum","34"],["Cluster Bean","33"],["Pepper Long","30"],["Coconut","27"],["Bottle Gourd","25"],["Jute","23"],["Guava","22"],["Buffallo","21"],["Orchids","20"],["Cowpea","19"],["Blackgram","19"],["Lily","16"],["Marigold","16"],["Turnip","16"],["Bitter Gourd","15"],["Apricot","15"],["Tapioca","14"],["Beetroot","13"],["Groundnut","13"],["Begonia","11"],["Cherry","10"],["Colacasia","10"],["Pear","9"],["Pomelo","8"],["Sohphi","8"],["Cotton","8"],["Green gram","8"],["Moong Dal","8"],["Musk Melon ","8"],["Jaggery","7"],["Resin Wood","7"],["Peach","6"],["Torch Wood","6"],["Sponge Gourd","5"],["Strawberry","5"],["Arhar Dal","5"],["Bengal gram","4"],["Mesta","4"],["Lettuce","4"],["Oats","3"],["Cinnamon","3"],["Ridge Gourd","3"],["Ramie","3"],["Sunflower","2"],["Sohshang","2"],["Water Melon","2"],["Chrysanthemum","2"],["Ash Gourd","1"]];
+    var dataSet='[{"NAME":"Ms. Cheryl Pohshna","interviewcentre":"Shillong","applicantcode":"2019F1"}, {"NAME":"Ms Swenita Shylla","interviewcentre":"Shillong","applicantcode":"2019F10"}]';
+    alert(dataSet);   
+    // $('#example').DataTable({                          
+    //                       data: dataSet,
+    //                       columns: [
+    //                           { title: "NAME" },
+    //                           { title: "interviewcentre" },
+    //                           { title: "applicantcode" } 
+    //                       ],
+    //                       "order": [[1, 'desc']],
+    //                       "pageLength": 10,
+    //                       "lengthChange": false,
+    //                       responsive: true                        
+
+                          
+    //                   });
+
+
+    //JSON ARRAY
+    // var data='Hello';
+    // //data=JSON.parse(data);
+    console.log("Before "+dataSet);
+    //dataSet=JSON.parse(dataSet);
+    console.log("After "+dataSet);
+    $('#example').DataTable( {
+        "ajax": {
+            "url": "dataset.txt",
+            "dataSrc": ""
+        },
+        "columns": [
+            { "data" : "NAME" },
+            { "data" : "interviewcentre" },
+            { "data" : "applicantcode" }
+        ]
+    } );
+
+} );
+</script>
